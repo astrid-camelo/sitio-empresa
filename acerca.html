@@ -1,37 +1,134 @@
-<main>
-    <section class="section-content" style="padding-bottom: 20px;">
-        <h2 style="color: var(--color-primario); text-align: center; margin-bottom: 10px;">Más de 20 Años de Solidez</h2>
-        <div style="text-align: center; margin-bottom: 40px; color: var(--color-secundario);">
-            Construyendo un legado de confianza y excelencia en ingeniería.
-        </div>
-        
-        <div style="display: flex; gap: 40px; align-items: flex-start;">
-            <div style="flex: 2;">
-                <h3>Nuestra Historia</h3>
-                <p>Constructora ROCA fue fundada en 2005 con el objetivo de elevar los estándares de calidad en la construcción local. Desde pequeños proyectos hasta grandes obras de infraestructura, nuestro compromiso con la innovación y la durabilidad nos ha posicionado como líderes.</p>
-                <p>Creemos que cada estructura es el cimiento del futuro de nuestros clientes y de la comunidad.</p>
-            </div>
-            <img src="images/historia.jpg" alt="Obra de construcción en progreso" style="flex: 1; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acerca de Nosotros - Constructora ROCA</title>
+<style>
+:root {
+  --color-primario: #003366;
+  --color-secundario: #444;
+  --color-acento: #f39c12;
+  --bg-claro: #f9f9f9;
+  --fuente-principal: "Poppins", sans-serif;
+}
 
-    <section style="background-color: #e9ecef; padding: 50px 20px;">
-        <div class="section-content" style="max-width: 1000px; margin: auto;">
-            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px;">Nuestros Pilares de Valor</h3>
-            <div style="display: flex; justify-content: space-around; text-align: center;">
-                <div style="flex: 1; padding: 0 20px;">
-                    <h4 style="color: var(--color-acento);">Sólidez</h4>
-                    <p>Garantía en la durabilidad y estabilidad de cada obra, superando las normas técnicas.</p>
-                </div>
-                <div style="flex: 1; padding: 0 20px;">
-                    <h4 style="color: var(--color-acento);">Innovación</h4>
-                    <p>Uso de tecnología y materiales de vanguardia para procesos más eficientes y sostenibles.</p>
-                </div>
-                <div style="flex: 1; padding: 0 20px;">
-                    <h4 style="color: var(--color-acento);">Compromiso</h4>
-                    <p>Entrega puntual y transparente, manteniendo al cliente informado en cada etapa del proyecto.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+body {
+  font-family: var(--fuente-principal);
+  line-height: 1.6;
+  color: var(--color-secundario);
+  background-color: var(--bg-claro);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2, h3, h4 {
+  color: var(--color-primario);
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.section-content {
+  margin-bottom: 60px;
+}
+
+/* Botones */
+.btn-principal {
+  background-color: var(--color-acento);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-principal:hover {
+  background-color: #e67e22;
+  transform: translateY(-3px);
+}
+
+/* Tarjetas */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Animación */
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<main>
+  <section class="section-content fade-in">
+    <h2 style="text-align:center;">Más de 20 Años de Solidez</h2>
+    <p style="text-align:center; margin-bottom:40px;">
+      Construyendo un legado de confianza y excelencia en ingeniería.
+    </p>
+
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:40px;">
+      <div style="flex:1 1 55%;">
+        <h3>Nuestra Historia</h3>
+        <p>Desde 2005, Constructora ROCA ha sido sinónimo de calidad y compromiso en la construcción local. A lo largo de los años hemos ejecutado proyectos residenciales, comerciales y de infraestructura con altos estándares técnicos y humanos.</p>
+        <p>Más que obras, construimos confianza y durabilidad en cada proyecto que emprendemos.</p>
+      </div>
+      <img src="images/historia.jpg" alt="Obra de construcción en progreso" style="flex:1 1 40%; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); max-width:450px;">
+    </div>
+  </section>
+
+  <section style="background-color:white; padding:60px 20px; border-radius:12px;" class="fade-in">
+    <h3 style="text-align:center; margin-bottom:40px;">Nuestros Pilares de Valor</h3>
+    <div class="grid-3">
+      <div class="card">
+        <img src="images/solidez.png" alt="Sólidez" style="width:70px; margin-bottom:15px;">
+        <h4>Sólidez</h4>
+        <p>Garantizamos estructuras firmes y duraderas, cumpliendo con las normas más exigentes del sector.</p>
+      </div>
+      <div class="card">
+        <img src="images/innovacion.png" alt="Innovación" style="width:70px; margin-bottom:15px;">
+        <h4>Innovación</h4>
+        <p>Implementamos materiales y tecnologías de última generación para una construcción sostenible.</p>
+      </div>
+      <div class="card">
+        <img src="images/compromiso.png" alt="Compromiso" style="width:70px; margin-bottom:15px;">
+        <h4>Compromiso</h4>
+        <p>Estamos presentes en cada etapa del proyecto, ofreciendo transparencia y cumplimiento.</p>
+      </div>
+    </div>
+  </section>
 </main>
+
+</body>
+</html>
